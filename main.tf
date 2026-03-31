@@ -76,3 +76,44 @@ module "analyst_wh_grant" {
   warehouse_name = module.analytics_wh.warehouse_name
   role_name      = module.data_analyst_role.role_name
 }
+
+# ---------------- Tables ----------------
+
+module "sales_tables" {
+  source = "./modules/tables"
+
+  database_name = module.sales_db.database_name
+  schema_name   = module.sales_schema.schema_name
+
+  tables = [
+    "CUSTOMERS",
+    "ORDERS",
+    "PRODUCTS"
+  ]
+}
+
+module "hr_tables" {
+  source = "./modules/tables"
+
+  database_name = module.hr_db.database_name
+  schema_name   = module.hr_schema.schema_name
+
+  tables = [
+    "EMPLOYEES",
+    "DEPARTMENTS"
+  ]
+}
+
+module "engineer_user_role" {
+  source = "./modules/user_role_grant"
+
+  role_name = module.data_engineer_role.role_name
+  user_name = var.user
+}
+
+module "analyst_user_role" {
+  source = "./modules/user_role_grant"
+
+  role_name = module.data_analyst_role.role_name
+  user_name = var.user
+}
