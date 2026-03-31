@@ -1,8 +1,3 @@
-Great, Varsha! 😊
-Here is a **professional `README.md` for your Terraform + Snowflake Capstone**. You can **copy-paste this directly into your GitHub repository**.
-
----
-
 # Snowflake Infrastructure Automation using Terraform
 
 ## Project Overview
@@ -272,14 +267,9 @@ By completing this project, the following skills were demonstrated:
 # Author
 
 **Varsha Kulkarni**
-Software Engineer | 2025 Graduate
+Software Engineer |KIPI.AI | 2025 Graduate
 First professional role in the tech industry
 Location: Bagalkot, Karnataka, India
 
 ---
 
-✅ This README will make your **capstone repository look very professional**.
-
----
-
-If you want, I can also show you **one final improvement that will make your project look like a senior-level DevOps project (Terraform workspace + CI/CD pipeline)**.
